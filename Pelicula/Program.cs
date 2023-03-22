@@ -61,7 +61,7 @@ namespace Pelicula
 
         public void Imprime()
         {
-        Console.WriteLine($"{titulo} ({año})");
+            Console.WriteLine($"{titulo} ({año})");
 
         }
 
@@ -78,7 +78,7 @@ namespace Pelicula
         //Métodos 
         public void Imprime()
         {
-            Console.WriteLine($"{nombre} ({año})");
+            //Console.WriteLine($"{nombre} ({año})");
         }
     }
 
