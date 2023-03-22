@@ -54,20 +54,19 @@ namespace Pelicula
 
         public void Imprime()
         {
-            Console.WriteLine($"{titulo} ({año})");
-            
+            Console.WriteLine($"{GetTitulo()} ({GetAño()})");
         }
        public void ImprimeActores(){
-        foreach (Actor a in actores)
+        foreach (Actor act in actores)
         {
-            Console.WriteLine(a);
+            Console.WriteLine(act.ToString());
         }
        }
          public void AgregaActor(Actor actor){
               actores.Add(actor);
          }
-
-    public class Actor
+    }
+    public class Actor 
     {
         //Propiedades
     private string Nombre;
@@ -170,4 +169,4 @@ public override string ToString()
         
         }
     }
-}}
+}
