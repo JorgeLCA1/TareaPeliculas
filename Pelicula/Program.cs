@@ -57,13 +57,13 @@ namespace Pelicula
             Console.WriteLine($"{titulo} ({año})");
             
         }
-       public void ImprimerActores(){
-        foreach (Actor añoo in actores)
+       public void ImprimeActores(){
+        foreach (Actor a in actores)
         {
-            Console.WriteLine(añoo);
+            Console.WriteLine(a);
         }
        }
-         public void AgregarActor(Actor actor){
+         public void AgregaActor(Actor actor){
               actores.Add(actor);
          }
 
@@ -90,9 +90,9 @@ public override string ToString()
         {
             return AñoActor;
         }
-        public void setAñoActor(Int16 añoo)
+        public void setAñoActor(Int16 a)
         {
-            AñoActor = añoo;
+            AñoActor = a;
         }
         public string getNombre()
         {
@@ -112,10 +112,10 @@ public override string ToString()
         }
         
         
-        public void Imprime()
+       /* public void Imprime()
         {
             Console.WriteLine($"{Nombre} ({AñoActor})");
-        }
+        } */
 
     }
 
@@ -129,10 +129,9 @@ public override string ToString()
         static void Main(string[] args)
         {
         Pelicula pelicula1 = new Pelicula("Forest Gump", 1994);
-        pelicula1.AgregarActor(new Actor("Tom Hanks", 1980));
-        pelicula1.AgregarActor(new Actor("Robin Wright", 1986));
-        pelicula1.Imprime();
-        pelicula1.ImprimerActores();
+        pelicula1.AgregaActor(new Actor("Tom Hanks", 1980));
+        pelicula1.AgregaActor(new Actor("Robin Wright", 1986));
+        pelicula1.ImprimeActores();
         
         
         
@@ -152,8 +151,8 @@ public override string ToString()
         pelicula2.SetDirector("Peter Jackson");
         Console.WriteLine("{0} - ({1})", pelicula2.GetTitulo(), pelicula2.GetAño());
 
-        pelicula1.AgregarActor(new Actor("Tom Hanks", 1980));
-        pelicula1.AgregarActor(new Actor("Robin Wright", 1986));
+        pelicula1.AgregaActor(new Actor("Tom Hanks", 1980));
+        pelicula1.AgregaActor(new Actor("Robin Wright", 1986));
         pelicula1.ImprimerActores();
 
         //Lista peliculas
